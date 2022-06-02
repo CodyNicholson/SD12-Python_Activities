@@ -8,6 +8,6 @@ def power(base,exp):
         return base*power(base,exp-1)
 
 a=3
-b=2
+b=3
 # 3^2=3*3 so 9 is the expected output
 print(power(a,b))

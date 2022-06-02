@@ -5,6 +5,8 @@ def arb_args(*args):
   for a in args:
     print(a)
 
+arb_args("arb_args1","arb_args2","arb_args3")
+
 #inner_func
 #  Takes in two integers. Two nested functions should perform separate, distinct math operations using the integers. The result of both nested functions should then be added together and printed.
 
