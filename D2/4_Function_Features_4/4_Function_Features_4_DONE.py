@@ -1,4 +1,4 @@
-# Write a Python function called max_num()to find the Max of three numbers.
+# Write a Python function called max_num() to find the Max of three numbers.
 
 def max_num(a,b,c):
   return max([a,b,c])
@@ -23,7 +23,7 @@ def mult_list(lst):
 
   return prod
     
-print(mult_list([1,2,3]))
+print(mult_list([1,2,3,100]))
 print(mult_list([]))
 print(mult_list([15]))
 
@@ -45,7 +45,8 @@ print(num_within(3,2,4))
 print(num_within(3,1,3))     
 print(num_within(10,2,5))
 
-# Write a Python function called pascal() that prints out the first n rows of Pascal's triangle.
+# Write a Python function called pascal() 
+# that prints out the first n rows of Pascal's triangle.
 
 triangle = [[1],[1,1]]
 def pascal(n):
@@ -81,3 +82,4 @@ def pascal(n):
 
 pascal(2)
 pascal(5)
+pascal(50)

@@ -1,4 +1,5 @@
-# Implement a function that will flatten and sort an array of integers in ascending order, and which adheres to a functional programming paradigm.
+# Implement a function that will flatten and sort an array of integers 
+# in ascending order, and which adheres to a functional programming paradigm.
 
 def flatten_and_sort(array):
     arr = []
@@ -6,6 +7,8 @@ def flatten_and_sort(array):
         for i in item:
             arr.append(i)
     return sorted(arr)
+
+print(flatten_and_sort([[12,55,1],[2,33,4],[88,44,3]]))
 
 '''
 Make sure to answer the following questions about your coding process:

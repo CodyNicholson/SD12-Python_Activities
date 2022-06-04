@@ -44,6 +44,67 @@ class Animal:
   def eat_food(self):
     print("All creatures need sustenance")
 
+class Customer(Person):
+  def __init__(self, in_name, in_age):
+    super().__init__(in_name, in_age)
+    self.hasTicket = False
+    self.inZoo = False
+  def buy_ticket(self):
+    if self.age <= 12:
+      print("No ticket for you " + self.name)
+    else:
+      print(self.name + " has purchased a ticket")
+      self.hasTicket = True
+  def enter_zoo(self, zoo):
+    if self.hasTicket:
+      zoo.add_customer(self.name)
+      self.hasTicket = False
+      self.inZoo = True
+    else:
+      print("Buy a ticket!!")
+  def exit_zoo(self, zoo):
+    if self.inZoo:
+      self.inZoo = False
+      zoo.remove_customer(self.name)
+
+class Animal:
+  def __init__(self, name):
+    self.name = name
+  def get_name(self):
+    return self.name
+  def make_noise(self):
+    print("Every animal makes noise")
+  def eat_food(self):
+    print("All creatures need sustenance")
+
+class Fish(Animal):
+  def __init__(self, name):
+    super().__init__(name)
+  def make_noise(self):
+    print(self.name + ": blub, blub, blub")
+  def eat_food(self):
+    print(self.name + " eats fish food")
+
+class Bird(Animal):
+  def __init__(self, name):
+    super().__init__(name)
+
+  def make_noise(self):
+    print(f"{self.name} says tweet, tweet")
+  
+  def eat_food(self):
+    print(f"{self.name} eats seeds, nuts and berries.")
+
+class Chimp(Animal):
+  def __init__(self,name):  
+    super().__init__(name)
+
+  def make_noise(self):
+    print(f"{self.name} says hoot-grunt")
+  
+  def eat_food(self):
+    print(f"{self.name} eats seeds, fruit, leaves, and bark.")
+
 nycZoo = Zoo("NYC Zoo")
 
 salmon = Fish("salmon")
@@ -61,3 +122,6 @@ for c in [alice, bob, charlie, dave]:
 nycZoo.visit_animals()
 for c in [alice, bob, charlie, dave]:
   c.exit_zoo(nycZoo)
+
+
+salmon.eat_food()
