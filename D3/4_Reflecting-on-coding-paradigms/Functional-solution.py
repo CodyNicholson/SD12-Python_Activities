@@ -8,7 +8,9 @@ def flatten_and_sort(array):
             arr.append(i)
     return sorted(arr)
 
-print(flatten_and_sort([[12,55,1],[2,33,4],[88,44,3]]))
+# print(flatten_and_sort([[12,55,1],[2,33,4],[88,44,3]]))
+# print(flatten_and_sort([[12,55,1],[2,33,4],[88,44,3]]))
+# print(flatten_and_sort([[12,55,1],[2,33,4],[88,44,3]]))
 
 '''
 Make sure to answer the following questions about your coding process:
@@ -23,3 +25,21 @@ Would it have been easier to solve this problem using a different programming st
 
 Why in particular is functional programming a helpful paradigm when solving this problem?
 '''
+
+class TestArray:
+    def __init__(self):
+        self.arr = []
+
+    def flatten_and_sort(self, newArray):
+        for item in newArray:
+            for i in item:
+                self.arr.append(i)
+        return sorted(self.arr)
+
+testOOP = TestArray()
+testResult1 = testOOP.flatten_and_sort([[12,55,1],[2,33,4],[88,44,3]])
+testResult2 = testOOP.flatten_and_sort([[12,55,1],[2,33,4],[88,44,3]])
+testResult3 = testOOP.flatten_and_sort([[12,55,1],[2,33,4],[88,44,3]])
+print(testResult1)
+print(testResult2)
+print(testResult3)

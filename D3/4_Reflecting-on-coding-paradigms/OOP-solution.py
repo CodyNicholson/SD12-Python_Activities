@@ -24,6 +24,9 @@ class AnakinsPod(Podracer):
   
   def boost(self):
     self.max_speed *= 2
+
+  def repair(self):
+    self.condition = "NewCondition"
     
 # Define another class that inherits Podracer and call this one SebulbasPod. 
 # This class should have a special method called flame_jet that will update
@@ -31,15 +34,23 @@ class AnakinsPod(Podracer):
 class SebulbasPod(Podracer):
   def __init__(self, max_speed, condition, price):
     super.init(max_speed, condition, price)
+
+  def set_max_speed(self, newSpeed):
+    self.max_speed(newSpeed)
   
   def flame_jet(self,other):
     other.condition = "trashed"
+
+s = SebulbasPod(10,"perfect", 100)
+
+s.max_speed = 500
+s.set_max_speed(500)
 
 '''
 Make sure to answer the following prompts about your coding experience:
 
 How does this solution demonstrate the four pillars of OOP? (It may not demonstrate all of them, describe only those that apply)
-
+(1) Inheritance (2) encapsulation (3) polymorphism (4) abstraction
 Would it have been easier to implement a solution to this problem using a different coding style? Why or why not?
 
 How in particular did Object Oriented Programming assist in the solving of this problem?

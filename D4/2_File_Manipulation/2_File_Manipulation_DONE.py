@@ -15,7 +15,7 @@ class FileManipulator:
     while True:
       try:
         myfile = open(fileName, 'w') # Open a file for writing
-        revContent = [x.strip()[::-1] for x in self.contents]
+        revContent = [line.strip()[::-1] for line in self.contents]
         for i in range(len(revContent)):
           if i == (len(revContent)-1):
             myfile.write(revContent[i])
@@ -47,7 +47,7 @@ class FileManipulator:
         break
         
 
-f = FileManipulator("tmp.txt")
+f = FileManipulator("tmpWRONG.txt")
 print(f.contents)
 f.reverse("tmp2.txt")
 f.upper("tmp3.txt")

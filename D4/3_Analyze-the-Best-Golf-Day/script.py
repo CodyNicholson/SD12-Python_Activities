@@ -1,7 +1,14 @@
-#WINDOWS
-# .\venv\Scripts\activate
-#MAC
-# source venv/bin/activate
+# STEP ONE - Create VENV Environment
+# python3 -m venv golf
+# python -m venv golf
+
+# STEP TWO - Activate The Environment
+# WINDOWS
+# .\golf\Scripts\activate
+# MAC
+# source golf/bin/activate
+
+# STEP THREE - Install Needed Libraries to Environment
 # pip install -r requirements.txt
 
 import pprint
