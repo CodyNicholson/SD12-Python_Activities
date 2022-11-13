@@ -25,6 +25,7 @@ def index():
     # GET 
     # find all reptiles 
     found_reptiles = models.Reptile.query.all()
+    print(found_reptiles)
 
     # create empty dictionary with an empty list value
     reptile_dict = {'reptiles': []}
@@ -32,6 +33,7 @@ def index():
     # loop through all reptiles and append it to the list 
     for reptile in found_reptiles:
         reptile_dict["reptiles"].append({
+            'id': reptile.id,
             'common_name': reptile.common_name,
             'scientific_name': reptile.scientific_name,
             'conservation_status': reptile.conservation_status,
@@ -49,6 +51,7 @@ def show(id):
 
     # create a dictionary of the reptile's information
     reptile_dict = {
+        'id': reptile.id,
         'common_name': reptile.common_name,
         'scientific_name': reptile.scientific_name,
         'conservation_status': reptile.conservation_status,

@@ -8,6 +8,8 @@ def binary_search(data, el):
     while first <= last and not found:
         mid = (first+last)//2
 
+        print("Checking: " + str(data[mid]))
+
         if data[mid] == el:
             found = True
         else:
@@ -19,6 +21,9 @@ def binary_search(data, el):
 
 test_list = [5, 8, 12, 14, 19, 22, 27, 30, 31]
 
-print(binary_search(test_list, 12))
-
+# print(binary_search(test_list, 12))
+# print(binary_search(test_list, 31))
+print(binary_search(test_list, 112))
+# print(binary_search(test_list, 0))
+# print(binary_search(test_list, 4))
 
